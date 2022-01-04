@@ -2,14 +2,14 @@ package get
 
 import (
     "context"
-    "encoding/json"
+    //"encoding/json"
     "fmt"
-    "os"
+    //"os"
     "strings"
 
     "github.com/peb-adr/openslides-manage-service/pkg/connection"
     "github.com/peb-adr/openslides-manage-service/proto"
-    "github.com/ghodss/yaml"
+    //"github.com/ghodss/yaml"
     "github.com/spf13/cobra"
     "google.golang.org/grpc"
     "google.golang.org/grpc/status"
@@ -31,8 +31,6 @@ func Cmd(cmd *cobra.Command, cfg connection.Params) *cobra.Command {
     cmd.Long = GetHelp + "\n\n" + GetHelpExtra
     cmd.Args = cobra.ExactArgs(1)
 
-    propHelpText := "Prop name to look up"
-
     cmd.RunE = func(cmd *cobra.Command, args []string) error {
         ctx, cancel := context.WithTimeout(context.Background(), cfg.Timeout())
         defer cancel()
@@ -43,8 +41,9 @@ func Cmd(cmd *cobra.Command, cfg connection.Params) *cobra.Command {
         }
         defer close()
 
-        if err := Run(ctx, cl); err != nil {
-            return fmt.Errorf("getting property: %w", err)
+        prop := args[0]
+        if err := Run(ctx, cl, prop); err != nil {
+            return fmt.Errorf("getting property %s: %w", prop, err)
         }
         return nil
     }
@@ -80,31 +79,31 @@ type datastore interface {
     Filter(ctx context.Context, collection string, filter []string, fields []string) (bool, error)
 }
 
-// CreateUser creates the given user.
-// This function is the server side entrypoint for this package.
-func CreateUser(ctx context.Context, in *proto.CreateUserRequest, a action) (*proto.CreateUserResponse, error) {
-    name := "user.create"
-    payload := []*proto.CreateUserRequest{in}
-    data, err := json.Marshal(payload)
-    if err != nil {
-        return nil, fmt.Errorf("marshalling action data: %w", err)
-    }
-    result, err := a.Single(ctx, name, transform(data))
-    if err != nil {
-        return nil, fmt.Errorf("requesting backend action %q: %w", name, err)
-    }
-
-    var ids []struct {
-        ID int `json:"id"`
-    }
-    if err := json.Unmarshal(result, &ids); err != nil {
-        return nil, fmt.Errorf("unmarshalling action result %q: %w", string(result), err)
-    }
-    if len(ids) != 1 {
-        return nil, fmt.Errorf("wrong lenght of action result, expected 1 item, got %d", len(ids))
-    }
-    return &proto.CreateUserResponse{UserID: int64(ids[0].ID)}, nil
-}
+//// CreateUser creates the given user.
+//// This function is the server side entrypoint for this package.
+//func CreateUser(ctx context.Context, in *proto.CreateUserRequest, a action) (*proto.CreateUserResponse, error) {
+//    name := "user.create"
+//    payload := []*proto.CreateUserRequest{in}
+//    data, err := json.Marshal(payload)
+//    if err != nil {
+//        return nil, fmt.Errorf("marshalling action data: %w", err)
+//    }
+//    result, err := a.Single(ctx, name, transform(data))
+//    if err != nil {
+//        return nil, fmt.Errorf("requesting backend action %q: %w", name, err)
+//    }
+//
+//    var ids []struct {
+//        ID int `json:"id"`
+//    }
+//    if err := json.Unmarshal(result, &ids); err != nil {
+//        return nil, fmt.Errorf("unmarshalling action result %q: %w", string(result), err)
+//    }
+//    if len(ids) != 1 {
+//        return nil, fmt.Errorf("wrong lenght of action result, expected 1 item, got %d", len(ids))
+//    }
+//    return &proto.CreateUserResponse{UserID: int64(ids[0].ID)}, nil
+//}
 
 // transform changes some JSON keys so we can use OpenSlides' template fields.
 func transform(b []byte) []byte {
