@@ -16,8 +16,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/config"
-	"github.com/OpenSlides/openslides-manage-service/pkg/shared"
+	"github.com/peb-adr/openslides-manage-service/pkg/config"
+	"github.com/peb-adr/openslides-manage-service/pkg/shared"
 	"github.com/spf13/cobra"
 )
 

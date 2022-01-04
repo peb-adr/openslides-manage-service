@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/server"
+	"github.com/peb-adr/openslides-manage-service/pkg/server"
 )
 
 func main() {

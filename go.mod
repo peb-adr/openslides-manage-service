@@ -1,4 +1,4 @@
-module github.com/OpenSlides/openslides-manage-service
+module github.com/peb-adr/openslides-manage-service
 
 go 1.16
 

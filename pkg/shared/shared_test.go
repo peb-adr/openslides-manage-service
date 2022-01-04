@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/shared"
+	"github.com/peb-adr/openslides-manage-service/pkg/shared"
 )
 
 func TestCreateFile(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/proto"
 )
 
 // sendReceiver reads and writes from a grpc tunnel connection.

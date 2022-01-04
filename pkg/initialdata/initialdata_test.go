@@ -9,9 +9,9 @@ import (
 	"path"
 	"testing"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/initialdata"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setup"
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/pkg/initialdata"
+	"github.com/peb-adr/openslides-manage-service/pkg/setup"
+	"github.com/peb-adr/openslides-manage-service/proto"
 	"google.golang.org/grpc"
 )
 

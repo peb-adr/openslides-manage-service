@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/setpassword"
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/pkg/setpassword"
+	"github.com/peb-adr/openslides-manage-service/proto"
 	"google.golang.org/grpc"
 )
 

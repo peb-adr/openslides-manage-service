@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/OpenSlides/openslides-manage-service/proto";
+option go_package = "github.com/peb-adr/openslides-manage-service/proto";
 
 import "google/protobuf/struct.proto";
 

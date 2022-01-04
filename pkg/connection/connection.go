@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/shared"
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/pkg/shared"
+	"github.com/peb-adr/openslides-manage-service/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

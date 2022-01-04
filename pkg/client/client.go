@@ -5,13 +5,13 @@ import (
 	"path"
 	"time"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/config"
-	"github.com/OpenSlides/openslides-manage-service/pkg/connection"
-	"github.com/OpenSlides/openslides-manage-service/pkg/createuser"
-	"github.com/OpenSlides/openslides-manage-service/pkg/initialdata"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setpassword"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setup"
-	"github.com/OpenSlides/openslides-manage-service/pkg/tunnel"
+	"github.com/peb-adr/openslides-manage-service/pkg/config"
+	"github.com/peb-adr/openslides-manage-service/pkg/connection"
+	"github.com/peb-adr/openslides-manage-service/pkg/createuser"
+	"github.com/peb-adr/openslides-manage-service/pkg/initialdata"
+	"github.com/peb-adr/openslides-manage-service/pkg/setpassword"
+	"github.com/peb-adr/openslides-manage-service/pkg/setup"
+	"github.com/peb-adr/openslides-manage-service/pkg/tunnel"
 	"github.com/spf13/cobra"
 )
 

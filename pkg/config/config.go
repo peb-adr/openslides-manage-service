@@ -10,7 +10,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/shared"
+	"github.com/peb-adr/openslides-manage-service/pkg/shared"
 	"github.com/ghodss/yaml"
 	"github.com/imdario/mergo"
 	"github.com/spf13/cobra"

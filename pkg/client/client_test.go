@@ -5,11 +5,11 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/client"
-	"github.com/OpenSlides/openslides-manage-service/pkg/initialdata"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setpassword"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setup"
-	"github.com/OpenSlides/openslides-manage-service/pkg/tunnel"
+	"github.com/peb-adr/openslides-manage-service/pkg/client"
+	"github.com/peb-adr/openslides-manage-service/pkg/initialdata"
+	"github.com/peb-adr/openslides-manage-service/pkg/setpassword"
+	"github.com/peb-adr/openslides-manage-service/pkg/setup"
+	"github.com/peb-adr/openslides-manage-service/pkg/tunnel"
 )
 
 func TestRunClient(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/createuser"
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/pkg/createuser"
+	"github.com/peb-adr/openslides-manage-service/proto"
 	"google.golang.org/grpc"
 )
 

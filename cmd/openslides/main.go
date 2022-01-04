@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/client"
+	"github.com/peb-adr/openslides-manage-service/pkg/client"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/config"
+	"github.com/peb-adr/openslides-manage-service/pkg/config"
 )
 
 func TestCmd(t *testing.T) {

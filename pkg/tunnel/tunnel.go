@@ -10,8 +10,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/connection"
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/pkg/connection"
+	"github.com/peb-adr/openslides-manage-service/proto"
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

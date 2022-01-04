@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/shared"
+	"github.com/peb-adr/openslides-manage-service/pkg/shared"
 )
 
 // Conn holds a connection to the backend action service.

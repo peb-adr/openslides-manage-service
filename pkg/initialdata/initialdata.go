@@ -7,10 +7,10 @@ import (
 	"os"
 	"path"
 
-	"github.com/OpenSlides/openslides-manage-service/pkg/connection"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setpassword"
-	"github.com/OpenSlides/openslides-manage-service/pkg/setup"
-	"github.com/OpenSlides/openslides-manage-service/proto"
+	"github.com/peb-adr/openslides-manage-service/pkg/connection"
+	"github.com/peb-adr/openslides-manage-service/pkg/setpassword"
+	"github.com/peb-adr/openslides-manage-service/pkg/setup"
+	"github.com/peb-adr/openslides-manage-service/proto"
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"
 )
