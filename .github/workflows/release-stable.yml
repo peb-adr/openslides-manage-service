@@ -10,8 +10,7 @@ jobs:
     uses: ./.github/workflows/release-create.yml
     with:
       branch: "${{ github.event.client_payload.branch }}"
-      tag: "${{ github.event.client_payload.version }}"
-      title: Stable Build
+      title: "Stable Build (${{ github.event.client_payload.version }})"
       prerelease: false
   release-stable-latest:
     name: "Create GitHub Release (latest) and upload binary"
@@ -19,6 +18,5 @@ jobs:
     uses: ./.github/workflows/release-create.yml
     with:
       branch: "${{ github.event.client_payload.branch }}"
-      tag: latest
-      title: Stable Build
+      title: "Stable Build (latest)"
       prerelease: false
